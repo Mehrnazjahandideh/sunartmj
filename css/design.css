@@ -1,0 +1,251 @@
+/* .coming-soon {
+    text-align: center;
+    padding: 200px 20px;
+    margin-bottom: -200px;
+    
+}
+
+.coming-soon h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    font-size: 1.2rem;
+    color: #555;
+    
+} */
+
+
+/* تنظیمات بخش زیر منو */
+.hero-art {
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: #222; /* رنگ پس زمینه کمی روشن‌تر از سیاه خالص برای تمایز */
+}
+
+/* فلکس باکس برای قرار دادن عکس و متن کنار هم */
+.hero-art-content {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        rgba(16 16 16 / 100%) 0%,
+        rgb(25 25 25 / 30%) 100%,
+        rgb(16 16 16 / 0%) 0%
+
+      ),
+      url(./img2/rihana.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: scroll;
+    padding: 160px 0px 50px ;
+    
+
+    
+    
+}
+
+.hero-image {
+    padding: 100PX;
+    /* flex: 1; */
+    
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px; 
+    box-shadow: none !important; 
+    border: none !important;
+    
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    z-index:1000;
+}
+
+.hero-text h3 {
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 300; /* وزن فونت سبک مشابه عکس */
+    color: #ccc;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+/* استایل دکمه */
+.btn-portfolio {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #555;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: var(--transition, 0.3s ease);
+}
+
+.btn-portfolio:hover {
+    background-color: var(--main-color, #e91e63); /* استفاده از رنگ قرمز/صورتی سایت شما */
+    border-color: var(--main-color, #e91e63);
+}
+/* مخفی کردن تیک‌های رادیویی */
+.art-portfolio input[type="radio"] {
+    display: none;
+}
+
+/* استایل دکمه‌ها */
+.filter-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btns label {
+    padding: 8px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #e91e63; /* رنگ صورتی سایت شما */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btns label:hover {
+    background-color: #e91e63;
+}
+
+/* بحش دکمه */
+.art-portfolio input[type="radio"] {
+  display: none;
+}
+
+.art-portfolio {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0 80px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* عنوان */
+.portfolio-header h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 3px;
+}
+
+.portfolio-header p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 50px;
+}
+/* دکمه‌های فیلتر: */
+.filter-btns {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-btns label {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 12px;
+  padding: 9px 20px;
+  font-weight: 600;
+  color: #aaa;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.filter-btns label:hover {
+  color: #e91e63;
+}
+
+#filter-ballpoint:checked ~ .filter-btns label[for="filter-ballpoint"],
+#filter-kohle:checked ~ .filter-btns label[for="filter-kohle"],
+#filter-oil:checked ~ .filter-btns label[for="filter-oil"],
+#filter-digital:checked ~ .filter-btns label[for="filter-digital"],
+#filter-sketch:checked ~ .filter-btns label[for="filter-sketch"] {
+  color: #fff;
+  border-bottom: 2px solid #e91e63;
+}
+
+/* گالری masonry style: */
+.gallery-grid {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 0 40px 40px 40px;
+}
+
+.art-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+  transition: transform 0.3s ease;
+}
+
+.art-item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.art-item:hover {
+  transform: scale(1.05);
+}
+
+.art-portfolio{
+position: relative;
+background: #0b0b0b;
+z-index: 2;
+padding-top: 80px;
+}
+
+/* فیلتر کردن عکس‌ها */
+#filter-ballpoint:checked ~ .gallery-grid .art-item:not(.ballpoint),
+#filter-kohle:checked ~ .gallery-grid .art-item:not(.kohle),
+#filter-oil:checked ~ .gallery-grid .art-item:not(.oil),
+#filter-digital:checked ~ .gallery-grid .art-item:not(.digital),
+#filter-sketch:checked ~ .gallery-grid .art-item:not(.sketch) {
+  display: none;
+}
+
+/* ریسپانسیو */
+@media (max-width:1200px) {
+  .gallery-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width:768px) {
+  .gallery-grid {
+    column-count: 2;
+    padding: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width:480px) {
+  .gallery-grid {
+    column-count: 1;
+    padding: 0 10px 10px 10px;
+  }
+}
